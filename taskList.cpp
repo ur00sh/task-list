@@ -155,6 +155,12 @@ int main (void)
     file << "Completed tasks: " << scorePos << endl;
     file << "Not completed tasks: " << scoreNeg << endl;
     file << "Score: " << score << endl;
+    
+    //congratulates user on winning the game
+    if (score == 5) {
+        cout<<"Winner, winner, chicken dinner!"<<endl;
+        file << "Congrats, you've completed all the tasks!" << endl;
+    }
 
     //finish writing and reading .txt file
     file.close();
