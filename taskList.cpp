@@ -43,19 +43,19 @@ int main (void)
     cout<<"List of tasks:"<<endl;
     
     cout<<"Task 1: ";
-    cin>>task1;
+    getline(cin, task1);
     
     cout<<"Task 2: ";
-    cin>>task2;
+    getline(cin, task2);
     
     cout<<"Task 3: ";
-    cin>>task3;
+    getline(cin, task3);
     
     cout<<"Task 4: ";
-    cin>>task4;
+    getline(cin, task4);
     
     cout<<"Task 5: ";
-    cin>>task5;
+    getline(cin, task5);
     
     //checks if tasks were completed
     cout<<"Type 'y' if you completed the task, type 'n' if you didn't."<<endl;
@@ -74,6 +74,7 @@ int main (void)
         file << "Task 1: " << task1  << " - task not completed" << endl;
     }
     else {
+        //if user has inserted an invalid answer, it prompts him to type in the answer again
         cout<<"Error: Invalid data. Please, try again."<<endl;
         goto conf1;
     }
